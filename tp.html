@@ -12,26 +12,47 @@
     <nav>
         <h5>Mon premier TP: Abdourahmane Diallo</h5>
     </nav>
-    <main>
-        <section class="bloc">
-            <div id="bloc">
-                <span>bloc 1</span>
-            </div>
-            <div id="bloc">
-                <span>bloc 3</span>
-            </div>
-        </section>
-        <section class="bloc">
-            <div id="bloc">
-                <span>bloc 2</span>
-            </div>
-            <div id="bloc">
-                <span>bloc 4</span>
-            </div>
-        </section>
-        
+    <main id="main">
+
+        <div class="div">
+            <span>bloc 1</span>
+        </div>
+        <div class="div">
+            <span>bloc 2</span>
+        </div>
+        <div class="div">
+            <span>bloc 3</span>
+        </div>
+        <div class="div">
+            <span>bloc 4</span>
+        </div>
         
     </main>
+    
+    <div id="button">
+        <button onclick="changeColor()">click me</button>
+    </div>
 
+
+    <script>
+        function changeColor(){
+            var div = document.getElementById("main").querySelectorAll(".div");
+            var span = document.getElementById("main").querySelectorAll("span");
+
+            for (let i = 0; i < div.length; i++) {
+                if (div[i].classList.contains('color')) {
+                    div[i].classList.remove('color')
+                    span[i].classList.remove('span')
+                } else {
+                    div[i].classList.add('color')
+                    span[i].classList.add('span')
+                    
+                }
+            }
+
+
+        }
+
+    </script>
 </body>
 </html>
