@@ -27,9 +27,9 @@
             <span>bloc 4</span>
         </div>
     </main>
-    <div id="button">
-        <button onclick="changeColor()">Change color</button>
-        <!-- <button onclick="switchBloc()">Changebloc</button> -->
+    <div id="" style="display: flex;">
+        <button id="" onclick="changeColor()">Change multi-color</button>
+        <button onclick="switchBlocColor()">Change color</button>
     </div>
     <section>
 
@@ -38,16 +38,16 @@
                 <h3 class="form__title"><strong>Contactez-nous</strong></h3>
                
                     <label for="Name">Name</label>
-                    <input type="text" id="user" placeholder="User" class="input" required/>
+                    <input type="text" id="nom" placeholder="User" class="input" />
                 
                     <label for="Email">Email</label>
-                    <input type="email" id="email" placeholder="Email" class="input" required/>
+                    <input type="email" id="email" placeholder="Email" class="input" />
                 
                     <label for="Adresse">Adresse</label>
-                    <input type="text" id="adresse" placeholder="Adresse" class="input" required/>
+                    <input type="text" id="adresse" placeholder="Adresse" class="input" />
                 
                     <label for="Feedback">Feedback</label>
-                    <textarea name="text_area" id="text_area" placeholder="Exprimez-vous" cols="30" rows="10" class="input" required></textarea>
+                    <textarea name="text_area" id="feedback" placeholder="Exprimez-vous" cols="3" rows="2" class="input" ></textarea>
                 
                 <input type="submit" class="btn" onclick="e => creer(e);" value="Sign Up">
             </form>
@@ -92,7 +92,6 @@
 
         </div>       
     </div> -->
-
 
    <script src="tp.js"></script>
 

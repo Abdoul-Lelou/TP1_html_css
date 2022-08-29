@@ -2,20 +2,8 @@
 
 function changeColor(){
     var div = document.getElementById("main").querySelectorAll(".div");
-    var span = document.getElementById("main").querySelectorAll("span");
-
-    // const randomColor = "#"+((1<<24)*Math.random()|0).toString(16); 
-
-
     for (let i = 0; i < div.length; i++) {
-        if (div[i].classList.contains('color')) {
-            div[i].classList.remove('color')
-            span[i].classList.remove('span')
-        } else {
-            div[i].classList.add('color')
-            span[i].classList.add('span')
-            
-        }
+        div[i].style.backgroundColor = "#"+((1<<24)*Math.random()|0).toString(16);
     }
 }
 
@@ -35,8 +23,8 @@ function getData(e){
     const tr = document.createElement('tr');
 
     for (let i = 0; i < 4; i++) {
-        if (data[i].value == ' ' || data[i].value == null) {
-            alert('Supprimer les espaces');
+        if (data[i].value == ' ' || data[i].value == '') {
+            alert('Veillez remplir le champs '+ data[i].id);
             return;
         }
         const td = document.createElement('td');
@@ -51,7 +39,7 @@ function getData(e){
     tab_body.appendChild(tre)
 
     
-    document.querySelector('td:last-child').setAttribute('rowspan', '4');
+    // document.querySelector('td:last-child').setAttribute('rowspan', '4');
 
     document.getElementById("form").reset();
 }
@@ -69,14 +57,10 @@ function show_Hide() {
     }
 }
 
-function switchBloc() {
+function switchBlocColor() {
     
-    if (main.style.display === "none" && section.style.display === "block") {
-        main.style.display = "block";
-        section.style.display = "none";
-    } else {
-        main.style.display = "none";
-        section.style.display = "block";
-
+    var div = document.getElementById("main").querySelectorAll(".div");
+    for (let i = 0; i < div.length; i++) {
+        div[i].classList.toggle('color');
     }
 }
